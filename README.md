@@ -6,6 +6,10 @@ E. coli: https://jingxinwanglab.github.io/R2S-Finder/ecoli_output.html
 
 Viruses: https://jingxinwanglab.github.io/R2S-Finder/virus_output.html
 
+All structure information is summarized in CSV_files folder. 
+
+Codes for R2S-Finder:
+
 In step 1, I downloaded SHAPE scores associated with genome annotations from the RASP database (http://rasp.zhanglab.net/) for human, E. coli, SARS-CoV-2, and Zika virus. I extracted genes with valid SHAPE scores (including zero reactivity) of at least 11 nucleotides (nts) in length (denoted as SHAPE(+) regions). If the SHAPE(+) regions had 5% missing SHAPE signals within the region, I discarded the genes (or transcripts) without further analysis. For DMS data, the tolerability of missing data was increased from 5% to 65%, because G and U are considered DMS(–). I reformatted the filtered data into SHAPE map files compatible with the Superfold software package (version 1.0) (https://github.com/Weeks-UNC/Superfold). The virus genomes were considered as single entries without separating the genes. 
 
 Source code (Jupyter Notebook): step1_shape_extract.ipynb
