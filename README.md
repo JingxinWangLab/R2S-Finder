@@ -1,4 +1,10 @@
-RNA Secondary Structure Finder (R2S-Finder) is a pipeline to identify stable RNA structures using genome-wide chemical probing data. The code provided here contains all the code needed for extracting RNA structures in the human genome. 
+RNA Secondary Structure Finder (R2S-Finder) is a pipeline to identify stable RNA structures using genome-wide chemical probing data. The code provided here contains all the code needed for extracting RNA structures in the human genome. You can explore the data using HTML links without downloading the data:
+
+Human: https://jingxinwanglab.github.io/R2S-Finder/human_output.html
+
+E. coli: https://jingxinwanglab.github.io/R2S-Finder/ecoli_output.html
+
+Viruses: https://jingxinwanglab.github.io/R2S-Finder/virus_output.html
 
 In step 1, I downloaded SHAPE scores associated with genome annotations from the RASP database (http://rasp.zhanglab.net/) for human, E. coli, SARS-CoV-2, and Zika virus. I extracted genes with valid SHAPE scores (including zero reactivity) of at least 11 nucleotides (nts) in length (denoted as SHAPE(+) regions). If the SHAPE(+) regions had 5% missing SHAPE signals within the region, I discarded the genes (or transcripts) without further analysis. For DMS data, the tolerability of missing data was increased from 5% to 65%, because G and U are considered DMS(–). I reformatted the filtered data into SHAPE map files compatible with the Superfold software package (version 1.0) (https://github.com/Weeks-UNC/Superfold). The virus genomes were considered as single entries without separating the genes. 
 
